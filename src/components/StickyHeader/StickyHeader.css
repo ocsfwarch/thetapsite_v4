@@ -1,0 +1,11 @@
+.sticky {
+  position: sticky;
+  top: 0;
+  z-index: 900;
+  background-color: var(--chakra-colors-chakra-body-bg);
+  margin-left: 1rem;
+  color: var(--chakra-colors-chakra-body-text);
+  /* color: #f5daba; */
+  font-weight: 700;
+  font-size: 1.25rem;
+}
