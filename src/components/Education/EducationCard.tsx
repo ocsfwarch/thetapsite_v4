@@ -20,7 +20,7 @@ interface Props {
 
 const EducationCard = ({ educationItem }: Props) => {
   return (
-    <Card borderRadius={10} overflow="hidden" minWidth="350px">
+    <Card borderRadius={10} overflow="hidden" minWidth="350px" maxWidth="550px">
       <CardHeader>
         <Heading fontSize="2xl" textAlign="left">
           {educationItem.degree}
