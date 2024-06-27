@@ -5,19 +5,19 @@ import StickyHeader from "../StickyHeader/StickyHeader";
 
 const WorkHistory = () => {
   return (
-    <>
+    <div>
+      <StickyHeader id="experience" title="Experience" />
       <SimpleGrid
         columns={{ sm: 1, md: 1, lg: 1, xl: 1 }}
         spacing={10}
         padding="10px"
         mb="6.5rem"
       >
-        <StickyHeader id="experience" title="Experience" />
         {WorkHistoryItems.map((item) => (
           <WorkHistoryCard key={item.id} item={item} />
         ))}
       </SimpleGrid>
-    </>
+    </div>
   );
 };
 

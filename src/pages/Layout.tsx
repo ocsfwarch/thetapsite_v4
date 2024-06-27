@@ -3,10 +3,10 @@ import { SimpleGrid, VStack } from "@chakra-ui/react";
 import { useEffect } from "react";
 import Introduction from "../components/Introduction/Introduction";
 import AboutMe from "../components/AboutMe/AboutMe";
-import Skills from "./Skills";
 import WorkHistory from "../components/WorkHistory/WorkHistory";
 import { Projects } from "../components/Projects/Projects";
 import Education from "../components/Education/Education";
+import SkillsList from "../components/Skills/Skills";
 
 const Layout = () => {
   useEffect(() => {
@@ -55,7 +55,7 @@ const Layout = () => {
           <VStack id="layout_info_container" maxHeight={"100vh"}>
             <AboutMe />
             <WorkHistory />
-            <Skills />
+            <SkillsList />
             <Education />
             <Projects projectType="enterprise" />
           </VStack>
