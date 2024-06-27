@@ -1,0 +1,25 @@
+.skill_container {
+  display: flex;
+  flex-flow: row nowrap;
+  justify-content: flex-start;
+  align-items: center;
+  background-color: transparent;
+}
+
+.skill_container img {
+  height: 4em;
+  width: 4em;
+  transition: all 1000ms;
+}
+
+.skill_container img:hover {
+  height: 6em;
+  width: 6em;
+}
+
+.skill_container span {
+  padding-left: 1em;
+  font: 1.7em "librebaskerville-regular", serif;
+  /*color: #00006f;*/
+  text-shadow: 0px 1px 2px rgb(0 0 0 / 50%);
+}
