@@ -18,20 +18,20 @@ export const Projects = ({ projectType }: Props) => {
   // project type and then create a list of
   // the projects.
   return (
-    <>
+    <div>
+      <StickyHeader id="projects" title="Projects" />
       <SimpleGrid
         columns={{ sm: 1, md: 1, lg: 1, xl: 1 }}
         spacing={10}
         padding="10px"
         mb="6.5rem"
       >
-        <StickyHeader id="projects" title="Projects" />
         {ProjectItems.filter((item) => item.type === projectType).map(
           (item, idx) => (
             <ProjectCard key={idx} project={item} />
           )
         )}
       </SimpleGrid>
-    </>
+    </div>
   );
 }; // End Projects
