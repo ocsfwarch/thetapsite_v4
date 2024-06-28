@@ -22,7 +22,7 @@ const ObserverContainer = () => {
     }
 
     const elementArray = [
-      //   aboutRef,
+      aboutRef,
       workHistoryRef,
       skillsRef,
       educationRef,
@@ -32,7 +32,7 @@ const ObserverContainer = () => {
     const observer = new IntersectionObserver(
       (entries) => {
         entries.forEach((entry) => {
-          console.log(`entry id = ${entry.target.id}`);
+          //   console.log(`entry id = ${entry.target.id}`);
           //   console.log(`isIntersection = ${entry.isIntersecting}`);
           if (entry.isIntersecting) {
             console.log(`${entry.target.id} is intersecting...`);
@@ -40,7 +40,7 @@ const ObserverContainer = () => {
           setIsAtTop(entry.isIntersecting);
         });
       },
-      { threshold: 0.5 }
+      { threshold: 0.4 }
     );
 
     elementArray.forEach((entry) => {
@@ -56,7 +56,7 @@ const ObserverContainer = () => {
 
   return (
     <VStack id="layout_info_container" maxHeight={"100vh"}>
-      <div ref={aboutRef}>
+      <div ref={aboutRef} id="aboutMeId">
         <AboutMe />
       </div>
       <div ref={workHistoryRef} id="WorkHistoryId">
