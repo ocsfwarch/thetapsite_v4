@@ -1,6 +1,6 @@
 import NavBar from "../components/NavBar";
 import { SimpleGrid, VStack } from "@chakra-ui/react";
-import { useEffect, useRef } from "react";
+import { useEffect, useRef, useState } from "react";
 import Introduction from "../components/Introduction/Introduction";
 import AboutMe from "../components/AboutMe/AboutMe";
 import WorkHistory from "../components/WorkHistory/WorkHistory";
@@ -10,6 +10,7 @@ import SkillsList from "../components/Skills/Skills";
 import ObserverContainer from "../components/ObserverContainer/ObserverContainer";
 
 const Layout = () => {
+  const [activeId, setActiveId] = useState("aboutMeId");
   useEffect(() => {
     // Select the grid element
     const gridContainer = document.querySelector("#layout_grid");
@@ -41,6 +42,12 @@ const Layout = () => {
       }
     }
   });
+
+  const handleSetCurrentFocus = (activeDivId: string) => {
+    // console.log(`Active = ${activeDivId}`);
+    setActiveId(activeDivId);
+  };
+
   return (
     <>
       <NavBar />
@@ -52,8 +59,8 @@ const Layout = () => {
           padding="10px"
           mb="6.5rem"
         >
-          <Introduction />
-          <ObserverContainer />
+          <Introduction activeId={activeId} />
+          <ObserverContainer handleSetCurrentFocus={handleSetCurrentFocus} />
           {/* <VStack id="layout_info_container" maxHeight={"100vh"}>
             <AboutMe />
             <WorkHistory />

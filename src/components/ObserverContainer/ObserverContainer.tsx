@@ -7,7 +7,11 @@ import { Projects } from "../Projects/Projects";
 import Skills from "../Skills/Skills";
 import { useEffect, useRef, useState } from "react";
 
-const ObserverContainer = () => {
+interface Props {
+  handleSetCurrentFocus: (divId: string) => void;
+}
+
+const ObserverContainer = ({ handleSetCurrentFocus }: Props) => {
   const aboutRef = useRef<HTMLDivElement>(null);
   const workHistoryRef = useRef<HTMLDivElement>(null);
   const skillsRef = useRef<HTMLDivElement>(null);
@@ -35,7 +39,7 @@ const ObserverContainer = () => {
           //   console.log(`entry id = ${entry.target.id}`);
           //   console.log(`isIntersection = ${entry.isIntersecting}`);
           if (entry.isIntersecting) {
-            console.log(`${entry.target.id} is intersecting...`);
+            handleSetCurrentFocus(entry.target.id);
           }
           setIsAtTop(entry.isIntersecting);
         });
@@ -56,19 +60,23 @@ const ObserverContainer = () => {
 
   return (
     <VStack id="layout_info_container" maxHeight={"100vh"}>
-      <div ref={aboutRef} id="aboutMeId">
+      <div ref={aboutRef} id="aboutMeId" style={{ marginTop: "4rem" }}>
         <AboutMe />
       </div>
-      <div ref={workHistoryRef} id="WorkHistoryId">
+      <div
+        ref={workHistoryRef}
+        id="workHistoryId"
+        style={{ marginTop: "8rem" }}
+      >
         <WorkHistory />
       </div>
-      <div ref={skillsRef} id="SkillsId">
+      <div ref={skillsRef} id="skillsId">
         <Skills />
       </div>
-      <div ref={educationRef} id="EducationId">
+      <div ref={educationRef} id="educationId">
         <Education />
       </div>
-      <div ref={projectsRef} id="ProjectsId">
+      <div ref={projectsRef} id="projectsId">
         <Projects projectType="enterprise" />
       </div>
     </VStack>

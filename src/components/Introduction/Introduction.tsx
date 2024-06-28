@@ -4,7 +4,11 @@ import { BsGithub, BsLinkedin } from "react-icons/bs";
 import Greeting from "../Greeting/Greeting";
 import Navigator from "../Navigator/Navigator";
 
-const Introduction = () => {
+interface Props {
+  activeId: string;
+}
+
+const Introduction = ({ activeId }: Props) => {
   const introContainerRef = useRef<HTMLDivElement>(null);
 
   return (
@@ -15,7 +19,7 @@ const Introduction = () => {
           title="Web Developer"
           narrative="Welcome to my space"
         />
-        <Navigator />
+        <Navigator activeId={activeId} />
         <HStack gap={8} fontSize={"1.5rem"}>
           <Tooltip label="GitHub" placement="left">
             <a href="https://github.com/ocsfwarch" target="_blank">
