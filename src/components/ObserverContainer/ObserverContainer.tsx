@@ -3,7 +3,7 @@ import "./ObserverContainer.css";
 import AboutMe from "../AboutMe/AboutMe";
 import WorkHistory from "../WorkHistory/WorkHistory";
 import Education from "../Education/Education";
-import { Projects } from "../Projects/Projects";
+import Projects from "../Projects/Projects";
 import Skills from "../Skills/Skills";
 import { useEffect, useRef, useState } from "react";
 
@@ -54,7 +54,11 @@ const ObserverContainer = ({ handleSetCurrentFocus }: Props) => {
     });
 
     return () => {
-      observer.unobserve(ele);
+      elementArray.forEach((entry) => {
+        if (entry.current) {
+          observer.unobserve(entry.current);
+        }
+      });
     };
   }, []);
 
