@@ -1,0 +1,15 @@
+.nav_item_container {
+  display: flex;
+  width: 9rem;
+  height: 3rem;
+  color: white;
+  background-color: black;
+  justify-content: flex-start;
+  align-items: center;
+  font-weight: var(--chakra-fontWeights-semibold);
+  background: var(--chakra-colors-transparent);
+  color: var(--chakra-colors-teal-200);
+  border-color: var(--chakra-colors-teal-200);
+  border: solid 1px;
+  border-radius: var(--chakra-radii-md);
+}

@@ -2,6 +2,7 @@ import { HStack, Icon, Tooltip, VStack } from "@chakra-ui/react";
 import { useRef } from "react";
 import { BsGithub, BsLinkedin } from "react-icons/bs";
 import Greeting from "../Greeting/Greeting";
+import Navigator from "../Navigator/Navigator";
 
 const Introduction = () => {
   const introContainerRef = useRef<HTMLDivElement>(null);
@@ -14,6 +15,7 @@ const Introduction = () => {
           title="Web Developer"
           narrative="Welcome to my space"
         />
+        <Navigator />
         <HStack gap={8} fontSize={"1.5rem"}>
           <Tooltip label="GitHub" placement="left">
             <a href="https://github.com/ocsfwarch" target="_blank">
