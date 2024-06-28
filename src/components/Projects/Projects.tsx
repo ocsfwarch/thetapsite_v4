@@ -13,7 +13,7 @@ interface Props {
  * @returns
  *  An array of divs containing a Project.
  */
-export const Projects = ({ projectType }: Props) => {
+const Projects = ({ projectType }: Props) => {
   // Here we want to filter the projects by
   // project type and then create a list of
   // the projects.
@@ -35,3 +35,5 @@ export const Projects = ({ projectType }: Props) => {
     </div>
   );
 }; // End Projects
+
+export default Projects;
