@@ -2,11 +2,6 @@ import NavBar from "../components/NavBar";
 import { SimpleGrid, VStack } from "@chakra-ui/react";
 import { useEffect, useRef, useState } from "react";
 import Introduction from "../components/Introduction/Introduction";
-// import AboutMe from "../components/AboutMe/AboutMe";
-// import WorkHistory from "../components/WorkHistory/WorkHistory";
-// import Projects from "../components/Projects/Projects";
-// import Education from "../components/Education/Education";
-// import SkillsList from "../components/Skills/Skills";
 import ObserverContainer from "../components/ObserverContainer/ObserverContainer";
 
 const Layout = () => {
@@ -68,13 +63,6 @@ const Layout = () => {
         >
           <Introduction activeId={activeId} displayNavMenu={displayNavMenu} />
           <ObserverContainer handleSetCurrentFocus={handleSetCurrentFocus} />
-          {/* <VStack id="layout_info_container" maxHeight={"100vh"}>
-            <AboutMe />
-            <WorkHistory />
-            <SkillsList />
-            <Education />
-            <Projects projectType="enterprise" />
-          </VStack> */}
         </SimpleGrid>
       </VStack>
     </>
