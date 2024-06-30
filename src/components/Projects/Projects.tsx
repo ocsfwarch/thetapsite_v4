@@ -5,7 +5,9 @@ import StickyHeader from "../StickyHeader/StickyHeader";
 
 interface Props {
   projectType: string;
+  displayHeaders: boolean;
 }
+
 /**
  * Create a list of Projects based on the type of project.
  * @param props.projectType
@@ -13,13 +15,13 @@ interface Props {
  * @returns
  *  An array of divs containing a Project.
  */
-const Projects = ({ projectType }: Props) => {
+const Projects = ({ projectType, displayHeaders }: Props) => {
   // Here we want to filter the projects by
   // project type and then create a list of
   // the projects.
   return (
     <div>
-      <StickyHeader id="projects" title="Projects" />
+      {displayHeaders && <StickyHeader id="projects" title="Projects" />}
       <SimpleGrid
         columns={{ sm: 1, md: 1, lg: 1, xl: 1 }}
         spacing={10}

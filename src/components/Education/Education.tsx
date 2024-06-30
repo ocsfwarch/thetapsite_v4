@@ -2,10 +2,14 @@ import { SimpleGrid, VStack } from "@chakra-ui/react";
 import EducationCard from "./EducationCard";
 import StickyHeader from "../StickyHeader/StickyHeader";
 
-const Education = () => {
+interface Props {
+  displayHeaders: boolean;
+}
+
+const Education = ({ displayHeaders }: Props) => {
   return (
     <div style={{ width: "100%" }}>
-      <StickyHeader id="education" title="Education" />
+      {displayHeaders && <StickyHeader id="education" title="Education" />}
       <SimpleGrid
         columns={{ sm: 1, md: 1, lg: 1, xl: 1 }}
         spacing={10}

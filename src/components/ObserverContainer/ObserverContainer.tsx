@@ -10,9 +10,13 @@ import StickyHeader from "../StickyHeader/StickyHeader";
 
 interface Props {
   handleSetCurrentFocus: (divId: string) => void;
+  displayHeaders: boolean;
 }
 
-const ObserverContainer = ({ handleSetCurrentFocus }: Props) => {
+const ObserverContainer = ({
+  handleSetCurrentFocus,
+  displayHeaders,
+}: Props) => {
   const aboutRef = useRef<HTMLDivElement>(null);
   const workHistoryRef = useRef<HTMLDivElement>(null);
   const skillsRef = useRef<HTMLDivElement>(null);
@@ -76,7 +80,7 @@ const ObserverContainer = ({ handleSetCurrentFocus }: Props) => {
           marginLeft: "1rem",
         }}
       >
-        <StickyHeader id="about" title="About" />
+        {displayHeaders && <StickyHeader id="about" title="About" />}
         <AboutMe />
       </div>
       <div
@@ -84,16 +88,16 @@ const ObserverContainer = ({ handleSetCurrentFocus }: Props) => {
         id="workHistoryId"
         style={{ marginTop: "8rem" }}
       >
-        <WorkHistory />
+        <WorkHistory displayHeaders={displayHeaders} />
       </div>
       <div ref={skillsRef} id="skillsId">
-        <Skills />
+        <Skills displayHeaders={displayHeaders} />
       </div>
       <div ref={educationRef} id="educationId">
-        <Education />
+        <Education displayHeaders={displayHeaders} />
       </div>
       <div ref={projectsRef} id="projectsId">
-        <Projects projectType="enterprise" />
+        <Projects displayHeaders={displayHeaders} projectType="enterprise" />
       </div>
     </VStack>
   );

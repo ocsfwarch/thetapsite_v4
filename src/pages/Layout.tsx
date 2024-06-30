@@ -62,7 +62,10 @@ const Layout = () => {
           mb="6.5rem"
         >
           <Introduction activeId={activeId} displayNavMenu={displayNavMenu} />
-          <ObserverContainer handleSetCurrentFocus={handleSetCurrentFocus} />
+          <ObserverContainer
+            handleSetCurrentFocus={handleSetCurrentFocus}
+            displayHeaders={displayHeaders}
+          />
         </SimpleGrid>
       </VStack>
     </>

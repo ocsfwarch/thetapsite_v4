@@ -25,10 +25,14 @@ const skills = [
   { image: "/images/Techs/vue.png", text: "Vue.js" },
 ];
 
-const Skills = () => {
+interface Props {
+  displayHeaders: boolean;
+}
+
+const Skills = ({ displayHeaders }: Props) => {
   return (
     <div style={{ width: "100%" }}>
-      <StickyHeader id="skills" title="Skills" />
+      {displayHeaders && <StickyHeader id="skills" title="Skills" />}
       <SimpleGrid
         columns={{ sm: 1, md: 2, lg: 3, xl: 3 }}
         spacing={10}

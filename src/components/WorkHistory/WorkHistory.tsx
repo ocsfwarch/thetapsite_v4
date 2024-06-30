@@ -3,10 +3,14 @@ import { SimpleGrid } from "@chakra-ui/react";
 import WorkHistoryCard from "./WorkHistoryCard";
 import StickyHeader from "../StickyHeader/StickyHeader";
 
-const WorkHistory = () => {
+interface Props {
+  displayHeaders: boolean;
+}
+
+const WorkHistory = ({ displayHeaders }: Props) => {
   return (
     <div>
-      <StickyHeader id="experience" title="Experience" />
+      {displayHeaders && <StickyHeader id="experience" title="Experience" />}
       <SimpleGrid
         columns={{ sm: 1, md: 1, lg: 1, xl: 1 }}
         spacing={10}
