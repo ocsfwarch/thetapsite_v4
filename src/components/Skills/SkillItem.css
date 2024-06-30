@@ -12,10 +12,10 @@
   transition: all 1000ms;
 }
 
-.skill_container img:hover {
+/* .skill_container img:hover {
   height: 6em;
   width: 6em;
-}
+} */
 
 .skill_container span {
   padding-left: 1em;
