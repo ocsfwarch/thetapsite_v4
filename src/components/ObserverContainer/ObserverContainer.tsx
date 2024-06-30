@@ -6,6 +6,7 @@ import Education from "../Education/Education";
 import Projects from "../Projects/Projects";
 import Skills from "../Skills/Skills";
 import { useEffect, useRef, useState } from "react";
+import StickyHeader from "../StickyHeader/StickyHeader";
 
 interface Props {
   handleSetCurrentFocus: (divId: string) => void;
@@ -64,7 +65,18 @@ const ObserverContainer = ({ handleSetCurrentFocus }: Props) => {
 
   return (
     <VStack id="layout_info_container" maxHeight={"100vh"}>
-      <div ref={aboutRef} id="aboutMeId" style={{ marginTop: "4rem" }}>
+      <div
+        ref={aboutRef}
+        id="aboutMeId"
+        style={{
+          display: "flex",
+          flexFlow: "column nowrap",
+          width: "100%",
+          marginTop: "6rem",
+          marginLeft: "1rem",
+        }}
+      >
+        <StickyHeader id="about" title="About" />
         <AboutMe />
       </div>
       <div

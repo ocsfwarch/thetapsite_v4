@@ -8,13 +8,25 @@ const AboutMe = () => {
       fontSize={"1.5rem"}
       color={"var(--chat-gray-400)"}
     >
-      👋Hi, my name is Terry Partridge. I have been a Full Stack Software
-      Engineer based in Mission Viejo, California since 2000. For the past 4
-      years my primary focus for frontend and backend development has been using
-      PostgreSQL, Express, React, and Node. I love the creative process
-      associated with developing software and the constant advances in software
-      development technologies. These allow me to build applications that are
-      useful to people and it feeds my need for continuous improvement.
+      <p
+        style={{
+          paddingTop: "1rem",
+          paddingBottom: "1rem",
+          fontSize: "1.5rem",
+        }}
+      >
+        👋Hi, my name is Terry Partridge. I am a Full Stack Software Engineer
+        based in Mission Viejo, California. My primary development experience
+        for frontend and backend has been React, TypeScript, PostgreSQL,
+        Express, and Node. I love the creative process associated with
+        developing software and the constant advances in software development
+        technologies.
+      </p>
+      <p style={{ paddingBottom: "1rem", fontSize: "1.5rem" }}>
+        When I am not at my computer, I am usually outside running or hiking,
+        interacting with my wife and children, or maybe building some new
+        project.
+      </p>
     </Box>
   );
 };
