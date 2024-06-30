@@ -17,51 +17,61 @@ const Navigator = ({ activeId }: Props) => {
   return (
     <div style={{ marginBottom: "1rem" }}>
       <VStack>
-        <Button
-          leftIcon={<BsInfoSquare />}
-          colorScheme={activeId === "aboutMeId" ? "red" : "teal"}
-          variant="outline"
-          width="9rem"
-          justifyContent="left"
-        >
-          About
-        </Button>
-        <Button
-          leftIcon={<BsPersonWorkspace />}
-          colorScheme={activeId === "workHistoryId" ? "red" : "teal"}
-          variant="outline"
-          width="9rem"
-          justifyContent="left"
-        >
-          Experience
-        </Button>
-        <Button
-          leftIcon={<BsTrophy />}
-          colorScheme={activeId === "skillsId" ? "red" : "teal"}
-          variant="outline"
-          width="9rem"
-          justifyContent="left"
-        >
-          Skills
-        </Button>
-        <Button
-          leftIcon={<BsBook />}
-          colorScheme={activeId === "educationId" ? "red" : "teal"}
-          variant="outline"
-          width="9rem"
-          justifyContent="left"
-        >
-          Education
-        </Button>
-        <Button
-          leftIcon={<BsTools />}
-          colorScheme={activeId === "projectsId" ? "red" : "teal"}
-          variant="outline"
-          width="9rem"
-          justifyContent="left"
-        >
-          Projects
-        </Button>
+        <a href="#aboutMeId">
+          <Button
+            leftIcon={<BsInfoSquare />}
+            colorScheme={activeId === "aboutMeId" ? "red" : "teal"}
+            variant="outline"
+            width="9rem"
+            justifyContent="left"
+          >
+            About
+          </Button>
+        </a>
+        <a href="#workHistoryId">
+          <Button
+            leftIcon={<BsPersonWorkspace />}
+            colorScheme={activeId === "workHistoryId" ? "red" : "teal"}
+            variant="outline"
+            width="9rem"
+            justifyContent="left"
+          >
+            Experience
+          </Button>
+        </a>
+        <a href="#skillsId">
+          <Button
+            leftIcon={<BsTrophy />}
+            colorScheme={activeId === "skillsId" ? "red" : "teal"}
+            variant="outline"
+            width="9rem"
+            justifyContent="left"
+          >
+            Skills
+          </Button>
+        </a>
+        <a href="#educationId">
+          <Button
+            leftIcon={<BsBook />}
+            colorScheme={activeId === "educationId" ? "red" : "teal"}
+            variant="outline"
+            width="9rem"
+            justifyContent="left"
+          >
+            Education
+          </Button>
+        </a>
+        <a href="#projectsId">
+          <Button
+            leftIcon={<BsTools />}
+            colorScheme={activeId === "projectsId" ? "red" : "teal"}
+            variant="outline"
+            width="9rem"
+            justifyContent="left"
+          >
+            Projects
+          </Button>
+        </a>
       </VStack>
     </div>
   );
