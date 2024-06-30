@@ -11,6 +11,9 @@ import ObserverContainer from "../components/ObserverContainer/ObserverContainer
 
 const Layout = () => {
   const [activeId, setActiveId] = useState("aboutMeId");
+  const [displayHeaders, setDisplayHeaders] = useState(false); // Assumes 2 column display
+  const [displayNavMenu, setDisplayNavMenu] = useState(true); // Assumes 2 column display
+
   useEffect(() => {
     // Select the grid element
     const gridContainer = document.querySelector("#layout_grid");
@@ -35,9 +38,13 @@ const Layout = () => {
         if (gridColumns.length > 1) {
           layoutContainer.style.overflowY = "";
           layoutInfoContainer.style.overflowY = "auto";
+          setDisplayHeaders(false);
+          setDisplayNavMenu(true);
         } else {
           layoutContainer.style.overflowY = "auto";
           layoutInfoContainer.style.overflowY = "";
+          setDisplayHeaders(true);
+          setDisplayNavMenu(false);
         }
       }
     }
@@ -59,7 +66,7 @@ const Layout = () => {
           padding="10px"
           mb="6.5rem"
         >
-          <Introduction activeId={activeId} />
+          <Introduction activeId={activeId} displayNavMenu={displayNavMenu} />
           <ObserverContainer handleSetCurrentFocus={handleSetCurrentFocus} />
           {/* <VStack id="layout_info_container" maxHeight={"100vh"}>
             <AboutMe />
