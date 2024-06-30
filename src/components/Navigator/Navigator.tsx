@@ -13,7 +13,7 @@ interface Props {
 }
 
 const Navigator = ({ activeId }: Props) => {
-  console.log(`ActiveId = ${activeId}`);
+  //console.log(`ActiveId = ${activeId}`);
   return (
     <div style={{ marginBottom: "1rem" }}>
       <VStack>
