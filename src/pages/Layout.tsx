@@ -32,11 +32,13 @@ const Layout = () => {
       if (layoutContainer && layoutInfoContainer) {
         if (gridColumns.length > 1) {
           layoutContainer.style.overflowY = "";
+          layoutContainer.style.overflowX = "";
           layoutInfoContainer.style.overflowY = "auto";
           setDisplayHeaders(false);
           setDisplayNavMenu(true);
         } else {
           layoutContainer.style.overflowY = "auto";
+          layoutContainer.style.overflowX = "hidden";
           layoutInfoContainer.style.overflowY = "";
           setDisplayHeaders(true);
           setDisplayNavMenu(false);
@@ -51,9 +53,9 @@ const Layout = () => {
   };
 
   return (
-    <>
+    <div style={{ width: "100%", overflow: "hidden" }}>
       <NavBar />
-      <VStack id="layout_container" maxHeight={"100vh"}>
+      <VStack id="layout_container" maxHeight={"100vh"} width={"100%"}>
         <SimpleGrid
           id="layout_grid"
           columns={{ sm: 1, md: 1, lg: 1, xl: 2 }}
@@ -68,7 +70,7 @@ const Layout = () => {
           />
         </SimpleGrid>
       </VStack>
-    </>
+    </div>
   );
 };
 
