@@ -7,9 +7,10 @@ import Navigator from "../Navigator/Navigator";
 interface Props {
   activeId: string;
   displayNavMenu: boolean;
+  changeNavId: (navId: string) => void;
 }
 
-const Introduction = ({ activeId, displayNavMenu }: Props) => {
+const Introduction = ({ activeId, displayNavMenu, changeNavId }: Props) => {
   const introContainerRef = useRef<HTMLDivElement>(null);
 
   return (
@@ -20,7 +21,9 @@ const Introduction = ({ activeId, displayNavMenu }: Props) => {
           title="Web Developer"
           narrative="Welcome to my space"
         />
-        {displayNavMenu && <Navigator activeId={activeId} />}
+        {displayNavMenu && (
+          <Navigator activeId={activeId} changeNavId={changeNavId} />
+        )}
         <HStack gap={8} fontSize={"1.5rem"}>
           <Tooltip label="GitHub" placement="left">
             <a href="https://github.com/ocsfwarch" target="_blank">

@@ -52,6 +52,10 @@ const Layout = () => {
     setActiveId(activeDivId);
   };
 
+  const handleNavIdChange = (navId: string) => {
+    console.log(`handleNavIdChange = ${navId}`);
+  };
+
   return (
     <div style={{ width: "100%", overflow: "hidden" }}>
       <NavBar />
@@ -63,7 +67,11 @@ const Layout = () => {
           padding="10px"
           mb="6.5rem"
         >
-          <Introduction activeId={activeId} displayNavMenu={displayNavMenu} />
+          <Introduction
+            activeId={activeId}
+            displayNavMenu={displayNavMenu}
+            changeNavId={handleNavIdChange}
+          />
           <ObserverContainer
             handleSetCurrentFocus={handleSetCurrentFocus}
             displayHeaders={displayHeaders}

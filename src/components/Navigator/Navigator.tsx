@@ -10,9 +10,10 @@ import {
 
 interface Props {
   activeId: string;
+  changeNavId: (navId: string) => void;
 }
 
-const Navigator = ({ activeId }: Props) => {
+const Navigator = ({ activeId, changeNavId }: Props) => {
   //console.log(`ActiveId = ${activeId}`);
   return (
     <div style={{ marginBottom: "1rem" }}>
@@ -24,6 +25,7 @@ const Navigator = ({ activeId }: Props) => {
           width="9rem"
           justifyContent="left"
           cursor={"default"}
+          onClick={() => changeNavId("aboutMeId")}
         >
           About
         </Button>
@@ -34,6 +36,7 @@ const Navigator = ({ activeId }: Props) => {
           width="9rem"
           justifyContent="left"
           cursor={"default"}
+          onClick={() => changeNavId("workHistoryId")}
         >
           Experience
         </Button>
@@ -44,6 +47,7 @@ const Navigator = ({ activeId }: Props) => {
           width="9rem"
           justifyContent="left"
           cursor={"default"}
+          onClick={() => changeNavId("skillsId")}
         >
           Skills
         </Button>
@@ -54,6 +58,7 @@ const Navigator = ({ activeId }: Props) => {
           width="9rem"
           justifyContent="left"
           cursor={"default"}
+          onClick={() => changeNavId("educationId")}
         >
           Education
         </Button>
@@ -64,6 +69,7 @@ const Navigator = ({ activeId }: Props) => {
           width="9rem"
           justifyContent="left"
           cursor={"default"}
+          onClick={() => changeNavId("projectsId")}
         >
           Projects
         </Button>
