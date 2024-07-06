@@ -76,7 +76,7 @@ const ObserverContainer = ({
           display: "flex",
           flexFlow: "column nowrap",
           width: "100%",
-          marginTop: "6rem",
+          marginTop: "1rem",
           marginLeft: "1rem",
         }}
       >
