@@ -52,8 +52,17 @@ const Layout = () => {
     setActiveId(activeDivId);
   };
 
+  /**
+   *
+   * @param navId
+   * const stdOffset is
+   */
   const handleNavIdChange = (navId: string) => {
-    console.log(`handleNavIdChange = ${navId}`);
+    const container = document.getElementById("layout_info_container");
+    const ele = document.getElementById(navId);
+    if (container && ele) {
+      container.scrollTo({ top: ele.offsetTop - 104, behavior: "smooth" });
+    }
   };
 
   return (
