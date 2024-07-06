@@ -17,7 +17,7 @@ const AboutMe = () => {
       >
         👋Hi, my name is Terry Partridge. I am a Full Stack Software Engineer
         based in Mission Viejo, California. My primary development experience
-        for frontend and backend has been React, TypeScript, PostgreSQL,
+        for frontend and backend has been in React, TypeScript, PostgreSQL,
         Express, and Node. I love the creative process associated with
         developing software and the constant advances in software development
         technologies.
