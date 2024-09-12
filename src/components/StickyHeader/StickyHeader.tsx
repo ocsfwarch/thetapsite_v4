@@ -6,7 +6,7 @@ interface Props {
 
 const StickyHeader = ({ id, title }: Props) => {
   return (
-    <div className="sticky" id={id}>
+    <div className="sticky" id={id} data-testid="sticky-header">
       {title}
     </div>
   );
