@@ -10,8 +10,7 @@ const AboutMe = () => {
     >
       <p
         style={{
-          paddingTop: "1rem",
-          paddingBottom: "1rem",
+          padding: "1rem",
           fontSize: "1.5rem",
         }}
       >
@@ -22,7 +21,7 @@ const AboutMe = () => {
         developing software and the constant advances in software development
         technologies.
       </p>
-      <p style={{ paddingBottom: "1rem", fontSize: "1.5rem" }}>
+      <p style={{ padding: "1rem", fontSize: "1.5rem" }}>
         When I am not at my computer, I am usually outside running or hiking,
         interacting with my wife and children, or maybe building some new home
         project.
