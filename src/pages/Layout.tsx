@@ -61,7 +61,8 @@ const Layout = () => {
     const container = document.getElementById("layout_info_container");
     const ele = document.getElementById(navId);
     if (container && ele) {
-      container.scrollTo({ top: ele.offsetTop - 104, behavior: "smooth" });
+      // container.scrollTo({ top: ele.offsetTop - 104, behavior: "smooth" });
+      container.scrollTo({ top: ele.offsetTop, behavior: "smooth" });
     }
   };
 
