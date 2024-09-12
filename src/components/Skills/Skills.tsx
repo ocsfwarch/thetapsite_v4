@@ -1,5 +1,4 @@
 import { SimpleGrid } from "@chakra-ui/react";
-import StickyHeader from "../StickyHeader/StickyHeader";
 import SkillItem from "./SkillItem";
 
 const skills = [
@@ -25,38 +24,19 @@ const skills = [
   { image: "/images/Techs/vue.png", text: "Vue.js" },
 ];
 
-interface Props {
-  displayHeaders: boolean;
-}
-
-const Skills = ({ displayHeaders }: Props) => {
+const Skills = () => {
   return (
-    <div style={{ width: "100%" }}>
-      {displayHeaders && <StickyHeader id="skills" title="Skills" />}
-      <SimpleGrid
-        columns={{ sm: 1, md: 2, lg: 3, xl: 3 }}
-        spacing={10}
-        padding="10px"
-        mb="6.5rem"
-      >
-        {skills.map((item, idx) => (
-          <SkillItem key={idx} image={item.image} title={item.text} />
-        ))}
-      </SimpleGrid>
-    </div>
+    <SimpleGrid
+      columns={{ sm: 1, md: 2, lg: 3, xl: 3 }}
+      spacing={10}
+      padding="10px"
+      mb="6.5rem"
+    >
+      {skills.map((item, idx) => (
+        <SkillItem key={idx} image={item.image} title={item.text} />
+      ))}
+    </SimpleGrid>
   );
-  // return (
-  //   <section className="skills_list">
-  //     <ul>
-  //       {skills.map((item, idx) => (
-  //         <li key={idx}>
-  //           <img src={item.image} alt={item.text} />
-  //           <span>{item.text}</span>
-  //         </li>
-  //       ))}
-  //     </ul>
-  //   </section>
-  // );
 };
 
 export default Skills;

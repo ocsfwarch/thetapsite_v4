@@ -69,35 +69,37 @@ const ObserverContainer = ({
 
   return (
     <VStack id="layout_info_container" maxHeight={"100vh"}>
-      <div
-        ref={aboutRef}
-        id="aboutMeId"
-        style={{
-          display: "flex",
-          flexFlow: "column nowrap",
-          width: "100%",
-          marginTop: "1rem",
-          marginLeft: "1rem",
-        }}
-      >
-        {displayHeaders && <StickyHeader id="about" title="About" />}
+      <div ref={aboutRef} id="aboutMeId" className="observer-item-container">
+        <StickyHeader id="about" title="About" />
         <AboutMe />
       </div>
       <div
         ref={workHistoryRef}
         id="workHistoryId"
-        style={{ marginTop: "8rem" }}
+        className="observer-item-container"
       >
-        <WorkHistory displayHeaders={displayHeaders} />
+        <StickyHeader id="experience" title="Experience" />
+        <WorkHistory />
       </div>
-      <div ref={skillsRef} id="skillsId">
-        <Skills displayHeaders={displayHeaders} />
+      <div ref={skillsRef} id="skillsId" className="observer-item-container">
+        <StickyHeader id="skills" title="Skills" />
+        <Skills />
       </div>
-      <div ref={educationRef} id="educationId">
-        <Education displayHeaders={displayHeaders} />
+      <div
+        ref={educationRef}
+        id="educationId"
+        className="observer-item-container"
+      >
+        <StickyHeader id="education" title="Education" />
+        <Education />
       </div>
-      <div ref={projectsRef} id="projectsId">
-        <Projects displayHeaders={displayHeaders} projectType="enterprise" />
+      <div
+        ref={projectsRef}
+        id="projectsId"
+        className="observer-item-container"
+      >
+        <StickyHeader id="projects" title="Projects" />
+        <Projects projectType="enterprise" />
       </div>
     </VStack>
   );

@@ -1,12 +1,14 @@
-.sticky {
+.sticky-header {
+  background-color: var(--chakra-colors-chakra-body-bg);
+  color: var(--chakra-colors-chakra-body-text);
+  font-size: 1.25rem;
+  font-weight: 700;
   position: sticky;
   top: 0;
-  z-index: 900;
+  z-index: 1;
+  padding-left: 1rem;
+  /* z-index: 900;
   width: 100%;
-  background-color: var(--chakra-colors-chakra-body-bg);
-  margin-left: 1rem;
-  color: var(--chakra-colors-chakra-body-text);
+  margin-left: 1rem; */
   /* color: #f5daba; */
-  font-weight: 700;
-  font-size: 1.25rem;
 }

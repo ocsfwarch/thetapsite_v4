@@ -1,27 +1,19 @@
 import { WorkHistoryItems } from "../../helpers/WorkHistoryItems";
 import { SimpleGrid } from "@chakra-ui/react";
 import WorkHistoryCard from "./WorkHistoryCard";
-import StickyHeader from "../StickyHeader/StickyHeader";
 
-interface Props {
-  displayHeaders: boolean;
-}
-
-const WorkHistory = ({ displayHeaders }: Props) => {
+const WorkHistory = () => {
   return (
-    <div>
-      {displayHeaders && <StickyHeader id="experience" title="Experience" />}
-      <SimpleGrid
-        columns={{ sm: 1, md: 1, lg: 1, xl: 1 }}
-        spacing={10}
-        padding="10px"
-        mb="6.5rem"
-      >
-        {WorkHistoryItems.map((item) => (
-          <WorkHistoryCard key={item.id} item={item} />
-        ))}
-      </SimpleGrid>
-    </div>
+    <SimpleGrid
+      columns={{ sm: 1, md: 1, lg: 1, xl: 1 }}
+      spacing={10}
+      padding="10px"
+      mb="6.5rem"
+    >
+      {WorkHistoryItems.map((item) => (
+        <WorkHistoryCard key={item.id} item={item} />
+      ))}
+    </SimpleGrid>
   );
 };
 
